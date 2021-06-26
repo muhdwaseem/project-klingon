@@ -6,7 +6,7 @@ var outputtxt= document.querySelector("#output");
 var serverURL="https://lessonfourapi.tanaypratap.repl.co/translate/yoda.json"
 
 function translationurl(text){
-    return serverURL + "?" + "text=" + text;
+    return serverURL + "?" + "text=" + text
 }
 function errorhandler(error){
     console.log("error occured",error)
@@ -15,9 +15,11 @@ function errorhandler(error){
 
 function clickeventhandler(){
  
+
 fetch(translationurl(inputtext))
-.then(Response=>Response.json())
+.then(response=>response.json())
 .then(json=>console.log(json)
+  
 
   )
 .catch(errorhandler)
